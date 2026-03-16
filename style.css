@@ -73,17 +73,17 @@ a:hover {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.75fr);
+  display: flex;
+  justify-content: space-between;
   gap: clamp(1.5rem, 3vw, 3rem);
-  align-items: stretch;
+  align-items: flex-start;
   padding: clamp(1.6rem, 3vw, 2.5rem);
-  background: #f8f3ed;
-  border: 1px solid #ddcfbf;
-  border-radius: calc(var(--radius) + 0.4rem);
-  box-shadow: var(--shadow);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero::after {
@@ -96,6 +96,11 @@ a:hover {
 .news-panel,
 .site-footer {
   animation: rise 0.8s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+.hero-copy {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .eyebrow,
@@ -199,10 +204,11 @@ h1 {
 }
 
 .hero-panel {
+  flex: 0 0 auto;
   position: relative;
   z-index: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
   align-content: start;
 }
@@ -213,7 +219,7 @@ h1 {
   aspect-ratio: 0.92;
   overflow: hidden;
   border-radius: 1rem;
-  background: #f1dfd0;
+  background: transparent;
   padding: 0.65rem;
   margin-left: auto;
   margin-right: auto;
@@ -448,6 +454,7 @@ h1 {
 @media (max-width: 1080px) {
   .hero,
   .layout {
+    display: grid;
     grid-template-columns: 1fr;
   }
 
