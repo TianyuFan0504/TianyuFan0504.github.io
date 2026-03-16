@@ -1,15 +1,15 @@
 :root {
-  --bg: oklch(0.97 0.015 85);
-  --bg-soft: oklch(0.94 0.02 85);
-  --paper: oklch(0.985 0.008 85);
-  --text: oklch(0.29 0.03 45);
-  --muted: oklch(0.47 0.025 48);
-  --line: oklch(0.83 0.03 82);
-  --accent: oklch(0.58 0.11 35);
-  --accent-deep: oklch(0.42 0.09 30);
-  --accent-soft: oklch(0.9 0.045 40);
-  --green-soft: oklch(0.92 0.04 145);
-  --shadow: 0 24px 70px color-mix(in oklab, var(--accent-deep) 12%, transparent);
+  --bg: #f3eee7;
+  --bg-soft: #ebe3d7;
+  --paper: #fbf8f3;
+  --text: #2e241d;
+  --muted: #67594c;
+  --line: #d9cdbd;
+  --accent: #b96c4c;
+  --accent-deep: #8f4e34;
+  --accent-soft: #efd6c4;
+  --green-soft: #dce7d7;
+  --shadow: 0 24px 70px rgba(143, 78, 52, 0.12);
   --radius: 1.75rem;
   --content-width: 1260px;
 }
@@ -30,8 +30,8 @@ body {
   font-family: "Manrope", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, color-mix(in oklab, var(--accent-soft) 65%, transparent) 0, transparent 28rem),
-    linear-gradient(180deg, oklch(0.965 0.018 82) 0%, var(--bg) 38%, oklch(0.955 0.016 88) 100%);
+    radial-gradient(circle at top left, rgba(239, 214, 196, 0.8) 0, rgba(239, 214, 196, 0) 28rem),
+    linear-gradient(180deg, #f6f0e8 0%, var(--bg) 38%, #f0e7dc 100%);
   line-height: 1.65;
 }
 
@@ -41,10 +41,9 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(to right, color-mix(in oklab, var(--line) 60%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in oklab, var(--line) 55%, transparent) 1px, transparent 1px);
+    linear-gradient(to right, rgba(217, 205, 189, 0.6) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(217, 205, 189, 0.55) 1px, transparent 1px);
   background-size: 72px 72px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent 80%);
   opacity: 0.36;
 }
 
@@ -74,8 +73,8 @@ a:hover {
   gap: clamp(1.5rem, 3vw, 3rem);
   align-items: stretch;
   padding: clamp(1.6rem, 3vw, 2.5rem);
-  background: color-mix(in oklab, var(--paper) 88%, var(--accent-soft));
-  border: 1px solid color-mix(in oklab, var(--line) 82%, var(--accent-soft));
+  background: #f8f3ed;
+  border: 1px solid #ddcfbf;
   border-radius: calc(var(--radius) + 0.4rem);
   box-shadow: var(--shadow);
   position: relative;
@@ -89,7 +88,7 @@ a:hover {
   width: 24rem;
   aspect-ratio: 1;
   border-radius: 40% 60% 65% 35%;
-  background: color-mix(in oklab, var(--accent-soft) 82%, transparent);
+  background: rgba(239, 214, 196, 0.85);
   opacity: 0.8;
 }
 
@@ -168,8 +167,8 @@ h1 {
   min-height: 2.75rem;
   padding: 0.7rem 1rem;
   border-radius: 999px;
-  border: 1px solid color-mix(in oklab, var(--accent) 25%, var(--line));
-  background: color-mix(in oklab, var(--paper) 78%, white);
+  border: 1px solid #d8c6b8;
+  background: #fffdfa;
   font-weight: 700;
   transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
 }
@@ -178,8 +177,8 @@ h1 {
 .spotlight a:hover,
 .inline-links a:hover {
   transform: translateY(-2px);
-  border-color: color-mix(in oklab, var(--accent) 45%, var(--line));
-  background: color-mix(in oklab, var(--accent-soft) 40%, var(--paper));
+  border-color: #c99579;
+  background: #f5e6db;
 }
 
 .hero-meta {
@@ -191,7 +190,7 @@ h1 {
 
 .hero-meta div {
   padding-top: 0.9rem;
-  border-top: 1px solid color-mix(in oklab, var(--line) 88%, transparent);
+  border-top: 1px solid #ddd2c4;
 }
 
 .hero-meta dt {
@@ -221,7 +220,7 @@ h1 {
   aspect-ratio: 0.9;
   overflow: hidden;
   border-radius: 2rem 2rem 7rem 2rem;
-  background: color-mix(in oklab, var(--accent-soft) 58%, var(--paper));
+  background: #f1dfd0;
   padding: 0.8rem;
 }
 
@@ -236,8 +235,8 @@ h1 {
 .spotlight {
   padding: 1.3rem 1.2rem;
   border-radius: 1.5rem;
-  background: linear-gradient(180deg, color-mix(in oklab, var(--accent-soft) 68%, white), var(--paper));
-  border: 1px solid color-mix(in oklab, var(--accent-soft) 60%, var(--line));
+  background: linear-gradient(180deg, #f6e6da, var(--paper));
+  border: 1px solid #e4cdbd;
 }
 
 .spotlight h2 {
@@ -266,8 +265,8 @@ h1 {
 .news-panel,
 .site-footer {
   padding: clamp(1.25rem, 2.4vw, 1.8rem);
-  background: color-mix(in oklab, var(--paper) 92%, white);
-  border: 1px solid color-mix(in oklab, var(--line) 88%, transparent);
+  background: #fcfaf7;
+  border: 1px solid #e0d5c8;
   border-radius: var(--radius);
 }
 
@@ -304,7 +303,7 @@ h1 {
   grid-template-columns: minmax(110px, 170px) minmax(0, 1fr);
   gap: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid color-mix(in oklab, var(--line) 90%, transparent);
+  border-top: 1px solid #e4dace;
 }
 
 .stack-list > :first-child,
@@ -332,8 +331,8 @@ h1 {
 .project-media {
   padding: clamp(1rem, 2vw, 1.4rem);
   background:
-    radial-gradient(circle at top, color-mix(in oklab, var(--green-soft) 70%, transparent), transparent 70%),
-    color-mix(in oklab, var(--paper) 65%, var(--green-soft));
+    radial-gradient(circle at top, rgba(220, 231, 215, 0.75), rgba(220, 231, 215, 0) 70%),
+    #eef3ea;
   border-radius: 1.6rem;
 }
 
@@ -361,7 +360,7 @@ h1 {
   grid-template-columns: 74px minmax(0, 1fr);
   gap: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid color-mix(in oklab, var(--line) 90%, transparent);
+  border-top: 1px solid #e4dace;
 }
 
 .paper-icon {
@@ -371,8 +370,8 @@ h1 {
   gap: 0.3rem;
   min-height: 74px;
   border-radius: 1.1rem;
-  background: color-mix(in oklab, var(--accent-soft) 45%, var(--paper));
-  border: 1px solid color-mix(in oklab, var(--line) 84%, var(--accent-soft));
+  background: #f5e8de;
+  border: 1px solid #dfcfc3;
   font-size: 0.82rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -404,7 +403,7 @@ h1 {
   grid-template-columns: 110px minmax(0, 1fr);
   gap: 0.9rem;
   padding: 0.95rem 0 0;
-  border-top: 1px solid color-mix(in oklab, var(--line) 90%, transparent);
+  border-top: 1px solid #e4dace;
 }
 
 .award-list article:first-child {
@@ -424,8 +423,7 @@ h1 {
 .news-panel {
   position: sticky;
   top: 1rem;
-  background:
-    linear-gradient(180deg, color-mix(in oklab, var(--accent-soft) 45%, var(--paper)) 0%, var(--paper) 100%);
+  background: linear-gradient(180deg, #f5e7dc 0%, var(--paper) 100%);
 }
 
 .news-list {
@@ -435,7 +433,7 @@ h1 {
 
 .news-list article {
   padding-top: 1rem;
-  border-top: 1px solid color-mix(in oklab, var(--line) 90%, transparent);
+  border-top: 1px solid #e4dace;
 }
 
 .news-list time {
@@ -453,9 +451,10 @@ h1 {
 .map-widget {
   overflow: hidden;
   border-radius: 1rem;
-  border: 1px solid color-mix(in oklab, var(--line) 88%, transparent);
-  background: color-mix(in oklab, var(--paper) 80%, white);
+  border: 1px solid #e0d5c8;
+  background: #fffdfa;
   padding: 0.35rem;
+  max-width: 100%;
 }
 
 .map-widget img,
@@ -463,6 +462,7 @@ h1 {
 .map-widget > div {
   width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
 @keyframes rise {
