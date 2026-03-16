@@ -28,6 +28,7 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: "Manrope", sans-serif;
+  font-size: 16px;
   color: var(--text);
   background:
     radial-gradient(circle at top left, rgba(239, 214, 196, 0.8) 0, rgba(239, 214, 196, 0) 28rem),
@@ -50,6 +51,10 @@ body::before {
 img {
   max-width: 100%;
   display: block;
+}
+
+p {
+  margin: 0 0 1rem;
 }
 
 a {
@@ -78,7 +83,7 @@ a:hover {
   border-radius: calc(var(--radius) + 0.4rem);
   box-shadow: var(--shadow);
   position: relative;
-  overflow: clip;
+  overflow: hidden;
 }
 
 .hero::after {
@@ -222,6 +227,8 @@ h1 {
   border-radius: 2rem 2rem 7rem 2rem;
   background: #f1dfd0;
   padding: 0.8rem;
+  max-width: 320px;
+  margin-left: auto;
 }
 
 .portrait-frame img {
@@ -338,6 +345,8 @@ h1 {
 
 .project-media img {
   width: 100%;
+  max-width: 180px;
+  margin: 0 auto;
   aspect-ratio: 1;
   object-fit: contain;
 }
@@ -348,6 +357,19 @@ h1 {
   flex-wrap: wrap;
   gap: 0.7rem;
   margin-top: 1rem;
+}
+
+.badge-row img,
+.paper-item p img {
+  width: auto;
+  max-width: 100%;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.paper-item p img {
+  margin-left: 0.45rem;
 }
 
 .paper-list {
@@ -455,6 +477,8 @@ h1 {
   background: #fffdfa;
   padding: 0.35rem;
   max-width: 100%;
+  width: 100%;
+  text-align: center;
 }
 
 .map-widget img,
@@ -462,6 +486,12 @@ h1 {
 .map-widget > div {
   width: 100%;
   height: auto;
+  max-width: 100%;
+}
+
+.map-widget table,
+.map-widget canvas,
+.map-widget svg {
   max-width: 100%;
 }
 
