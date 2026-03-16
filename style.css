@@ -73,17 +73,17 @@ a:hover {
 }
 
 .hero {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(240px, 320px);
   gap: clamp(1.5rem, 3vw, 3rem);
   align-items: flex-start;
   padding: clamp(1.6rem, 3vw, 2.5rem);
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
+  background: #fcfaf7;
+  border: 1px solid #e0d5c8;
+  border-radius: calc(var(--radius) + 0.2rem);
+  box-shadow: var(--shadow);
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .hero::after {
@@ -204,11 +204,10 @@ h1 {
 }
 
 .hero-panel {
-  flex: 0 0 auto;
   position: relative;
   z-index: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-start;
   align-content: start;
 }
@@ -454,7 +453,6 @@ h1 {
 @media (max-width: 1080px) {
   .hero,
   .layout {
-    display: grid;
     grid-template-columns: 1fr;
   }
 
