@@ -107,7 +107,6 @@ a:hover {
 
 .eyebrow,
 .section-index,
-.spotlight-label,
 .timeline-year,
 .award-list span,
 .news-list time {
@@ -118,8 +117,7 @@ a:hover {
 }
 
 .eyebrow,
-.section-index,
-.spotlight-label {
+.section-index {
   color: var(--accent);
 }
 
@@ -131,7 +129,6 @@ h3 {
 }
 
 h1,
-.spotlight h2,
 .section-heading h2 {
   font-family: "Instrument Serif", serif;
   font-weight: 400;
@@ -164,7 +161,6 @@ h1 {
 }
 
 .hero-actions a,
-.spotlight a,
 .inline-links a {
   display: inline-flex;
   align-items: center;
@@ -179,7 +175,6 @@ h1 {
 }
 
 .hero-actions a:hover,
-.spotlight a:hover,
 .inline-links a:hover {
   transform: translateY(-2px);
   border-color: #c99579;
@@ -215,20 +210,23 @@ h1 {
 .hero-panel {
   position: relative;
   z-index: 1;
-  display: grid;
-  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   align-content: start;
 }
 
 .portrait-frame {
   margin: 0;
-  aspect-ratio: 0.9;
+  width: min(320px, 100%);
+  aspect-ratio: 1;
   overflow: hidden;
-  border-radius: 2rem 2rem 7rem 2rem;
+  border-radius: 50%;
   background: #f1dfd0;
   padding: 0.8rem;
-  max-width: 320px;
   margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #e4cdbd;
 }
 
 .portrait-frame img {
@@ -236,24 +234,7 @@ h1 {
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  border-radius: 1.5rem 1.5rem 6.2rem 1.5rem;
-}
-
-.spotlight {
-  padding: 1.3rem 1.2rem;
-  border-radius: 1.5rem;
-  background: linear-gradient(180deg, #f6e6da, var(--paper));
-  border: 1px solid #e4cdbd;
-}
-
-.spotlight h2 {
-  margin-top: 0.4rem;
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-}
-
-.spotlight p {
-  margin: 0.7rem 0 1rem;
-  color: var(--muted);
+  border-radius: 50%;
 }
 
 .layout {
@@ -279,9 +260,10 @@ h1 {
 
 .section-heading {
   display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.2rem;
   margin-bottom: 1.15rem;
 }
 
@@ -470,31 +452,6 @@ h1 {
   align-items: start;
 }
 
-.map-widget {
-  overflow: hidden;
-  border-radius: 1rem;
-  border: 1px solid #e0d5c8;
-  background: #fffdfa;
-  padding: 0.35rem;
-  max-width: 100%;
-  width: 100%;
-  text-align: center;
-}
-
-.map-widget img,
-.map-widget iframe,
-.map-widget > div {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-}
-
-.map-widget table,
-.map-widget canvas,
-.map-widget svg {
-  max-width: 100%;
-}
-
 @keyframes rise {
   from {
     opacity: 0;
@@ -567,7 +524,6 @@ h1 {
   .news-panel,
   .site-footer,
   .hero-actions a,
-  .spotlight a,
   .inline-links a {
     animation: none;
     transition: none;
